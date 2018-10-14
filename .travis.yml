@@ -41,6 +41,8 @@ matrix:
         - REFGUIDE_CHECK=1
         - NUMPYSPEC="--upgrade numpy"
     - python: 3.7
+      dist: xenial # travis-ci/travis-ci/issues/9815
+      sudo: true
       env:
         - TESTMODE=full
         - COVERAGE=
