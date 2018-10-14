@@ -33,6 +33,7 @@ matrix:
         - TESTMODE=full
         - COVERAGE="--coverage --gcov"
         - NUMPYSPEC="--upgrade numpy"
+        - OPTIMIZE=-OO
     - python: 3.6
       env:
         - TESTMODE=fast
@@ -40,15 +41,6 @@ matrix:
         - USE_WHEEL=1
         - REFGUIDE_CHECK=1
         - NUMPYSPEC="--upgrade numpy"
-    - python: 3.7
-      dist: xenial # travis-ci/travis-ci/issues/9815
-      sudo: true
-      env:
-        - TESTMODE=full
-        - COVERAGE=
-        - NUMPYSPEC="numpy==1.8.2"
-        - USE_SDIST=1
-        - OPTIMIZE=-OO
     - python: 3.4
       env:
         - TESTMODE=fast
